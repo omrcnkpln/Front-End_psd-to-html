@@ -1,0 +1,427 @@
+/* 
+_________________________________________________________
+|														 |
+|	Bu css dökümanı Hamit TOKAY tarafından kodlanmıştır  |
+|________________________________________________________|*/
+
+
+// genel
+.center{width: 1170px;margin:0 auto;}
+.clear{clear:both}
+
+// fonts
+@import "../fonts/montserrat/stylesheet.css";
+@import "../fonts/raleway/stylesheet.css";
+@import "../fonts/playfair_display/stylesheet.css";
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+@mixin background-size($cover) {
+  -webkit-background-size: $cover;
+  -moz-background-size: $cover;
+  -ms-background-size: $cover;
+  -o-background-size: $cover;
+  background-size: $cover;
+}
+@mixin box-sizing($border-box) {
+  -webkit-box-sizing: $border-box;
+  -moz-box-sizing: $border-box;
+  -ms-box-sizing: $border-box;
+  -o-box-sizing: $border-box;
+  box-sizing: $border-box;
+}
+
+// colors
+$baseColor : #ffb932;
+
+/*------------------------ header -----------------------*/
+header{
+	width: 100%;
+	height: 600px;
+	position: relative;
+	background: url(../images/headerBg.jpg)no-repeat center;
+	@include background-size(cover);
+	background-attachment: fixed;
+	.header-content{
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.50);
+		// slider
+		.slider-item{
+			position: relative;
+			top: 220px;
+			.slide{
+				position: absolute;
+				top: 50%;
+				width:100%;
+				text-align: center;
+				h2.title{
+					color:#fff;
+					font-size: 45px;
+					font-family: 'playfair_displayitalic';
+					span{
+						display: block;
+						font-size: 24px;
+						font-family: 'ralewaylight';
+						margin: 25px 0;
+					}
+				}
+				a{
+					color:#fff;
+					font-family: 'montserratbold';
+					font-size: 14px;
+					border: 2px solid #fff;
+					display: inline-block;
+					position: relative;
+					padding: 18px 25px;
+					position: relative;
+					z-index: 99;
+					overflow: hidden;
+					
+					&::before{
+						content: '';
+						position: absolute;
+					@include transition(all 350ms);
+						top: 0;
+						left:50%;
+						top:50%;
+					}
+					@include transition(all 350ms);
+					&:hover{
+						border-color:$baseColor;
+						color:#000;
+						&::before{
+							background:$baseColor;
+							width: 200%;
+							height: 100%;
+							top: 0;
+							z-index: -1;
+							left:-100px;
+							opacity: .8	;
+						}
+					}
+				}
+			}
+
+		}
+
+	}
+
+	nav{
+		position: relative;
+		top: 30px;
+
+		// logo
+		h1.logo{
+			float: left;
+			margin-left: 35px;
+			a{
+				@include transition(all 350ms);
+				color:#fff;
+				font-size: 25px;
+				font{
+					color:$baseColor
+				}
+				&:hover{opacity: .6}
+			}
+		}
+
+		// menu
+		ul.menu{
+			float: right;
+			margin-right: 35px;
+			margin-top: 5px;
+			font-family: 'montserratbold';
+			li{
+				position: relative;
+					&.active{
+						&::before{
+						background:#fff;
+						opacity: 1;
+					}
+					a{
+						color:#fff!important;
+					}
+				}
+				&::before{
+					content:'';
+					@include transition(all 350ms);
+					width: 50%;
+					left:50%;
+					margin-left: -25%;
+					height: 2px;
+					background:#fff;
+					position: absolute;
+					bottom: -10px;
+					opacity: 0;
+				}
+				float: left;
+				margin-left: 25px;
+				a{
+					color: $baseColor;
+					font-size: 14px;
+					@include transition(all 350ms);
+					&:hover{
+						color:#fff;
+					}
+				}
+				&:hover{
+					&::before{
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+	}
+
+	.slider-button{
+
+	
+		ul.icons{
+			position: absolute;
+			width: 100%;
+			top:180px;
+			li{
+				float: left;
+				font-size: 50px;
+				color:#fff;
+				position: absolute;
+				&.prev{left:2%;}
+				&.next{right:2%;}
+				cursor: pointer;
+			}
+		}
+
+		ul.circles{
+			margin: auto;
+			position: absolute;
+			bottom:40px;
+			z-index: 99999;
+			left:50%;
+			li{
+				width: 10px;
+				height: 10px;
+				@include transition(all 350ms);
+				font-size: 0;
+				background: #fff;
+				@include border-radius(50%);
+				float: left;
+				margin-right: 12px;
+				cursor: pointer;
+				&.active{background:$baseColor;}
+			}
+		}
+
+	}
+
+}
+
+
+.Gtitle{
+	text-align: center;
+	font-size: 32px;
+	color:#000;
+	font-family: 'playfair_displayitalic';
+	span{
+		display: block;
+		margin-top: 30px;
+		width: 12%;
+		background: #7f7f7f;
+		height: 2px;
+		text-align: center;
+		display:  block;
+		margin-left:auto;
+		margin-right: auto;
+		i{
+			position: relative;
+			top: -15px;
+			background: #fff;
+			padding: 0px 15px; 
+		}
+	}
+	p.desc{
+		color:#4a4a4a;
+		font-family: 'ralewayregular';
+		font-size: 14px;
+		margin-top: 35px
+	}
+}
+
+
+section.services{
+	width: 100%;
+	height: 625px;
+	background: url(../images/servicesBg.png)top repeat-x;	
+	position: relative;
+	padding: 0 30px;
+	top: -212px;
+	@include box-sizing(border-box);
+	padding-top: 252px;
+
+	.box{
+		width: 255px;
+		margin-top: 50px;
+		position: relative;
+				@include transition(all 350ms);
+		float: left;
+		margin-right: 30px;
+		&:last-child{margin-right: 0;}
+		span.icon{
+			width: 95px;
+			height: 95px;
+			background: #f0f0f0;
+			text-align: center;
+			line-height: 95px;
+			font-size: 28px;
+			color:#000;
+			display: block;
+			margin-bottom: 25px;
+		}
+		h3{
+			font-size: 18px;
+			color: #000;
+				@include transition(all 350ms);
+			font-family: 'montserratbold';
+			margin-bottom: 15px;
+		}
+		p{
+			color:#474747;
+			font-size: 13px;
+			line-height: 22px;
+			font-family: 'ralewayregular';
+		}
+		&::before{
+			content: '';
+			width: 65px;
+				@include transition(all 350ms);
+			height: 3px;
+			background: #000;
+			position: absolute;
+			bottom:-25px;
+		}
+		&:hover{
+			h3{color: $baseColor;}
+			&::before{background: $baseColor;}
+			*{cursor: default;}
+		}
+	}
+
+}
+
+
+
+// parallax
+section.parallax{
+	width: 100%;
+	height: 225px;
+	background: url(../images/parallax1.jpg)no-repeat 0 center;
+	background-attachment: fixed;
+	clear: both;
+	@include background-size(cover);
+	p{
+		text-align: center;
+		color:#fff;
+		line-height: 225px;
+		font-family: 'playfair_displayregular';
+	}
+}
+
+
+// projects
+section.projects{
+	width: 100%;
+	height: 760px;
+	padding-top: 65px;
+	background: url(../images/parallax2.jp)no-repeat center;
+	@include background-size(cover);
+	.Gtitle span i{background:#ebebeb;}
+
+	.tab{
+
+		margin-top: 45px;
+
+		.tab-button{
+			position: absolute;
+			left:50%;
+			ul{
+				li{
+					float: left;
+					margin-right: 15px;
+					color:#4a4a4a;
+					font-size: 14px;
+					font-family: 'montserratbold';
+					cursor: pointer;
+					position: relative;
+					&::before{
+						content:'';
+						@include transition(all 350ms);
+						width: 50%;
+						left:50%;
+						margin-left: -25%;
+						height: 2px;
+						background:#4a4a4a;
+						position: absolute;
+						bottom: -10px;
+						opacity: 0;
+					}
+					&:hover{
+						&::before{
+							opacity: 1;
+						}
+					}
+					&.active2{
+						color:#000;
+						&::before{
+							background:#000;
+							opacity: 1
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	.tab-content{
+
+		position: relative;
+		top: 80px;
+		ul{
+			li{
+				float: left;
+				overflow: hidden;
+				&.large{width: 380px;height: 380px;}
+				&.middle{width: 350px;height: 190px;}
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
