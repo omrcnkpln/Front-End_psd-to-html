@@ -1,0 +1,108 @@
+.sirket-hukuku{
+    .container{
+        .menu{
+            .topmenu{
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    li{
+                        font: normal normal 600 24px Jost;
+                        letter-spacing: 0px;
+                        color: #152B59;
+                        padding: 4px;
+                        cursor: pointer;
+                        border-bottom: 3px solid transparent;
+                    }
+                    .active{
+                        border-bottom: 3px solid #98C78D;
+                        
+                    }
+                }
+            }
+            .submenu{
+                margin-top: 10px;
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    li{
+                        font: normal normal 600 20px Jost;
+                        letter-spacing: 0px;
+                        color: #152B59;
+                        padding: 4px;
+                        cursor: pointer;
+                        border-bottom: 3px solid transparent;
+                    }
+                    .active{
+                        border-bottom: 3px solid #98C78D;
+                    }
+                }
+            }
+        }
+        .contents{
+            .content{
+                .row{
+                    .col-xl-12{
+                        
+                        .start{
+                            font: normal normal 500 20px Jost;
+                            letter-spacing: 0px;
+                            color: #152B59;
+                        }
+                        .head{
+                            font: normal normal 500 20px Jost;
+                            letter-spacing: 0px;
+                            color: #152B59;                        
+                        }
+                        .content-l{
+                            .list{
+                                display: flex;
+                                align-items: center;
+                                gap:15px;
+                                color: #152B59;
+                                font-size: 19px;
+                                margin-top: 10px;
+                                b{
+                                    margin: 0;
+                                    padding: 0;
+                                    font-weight:500;
+                                    word-wrap: normal !important;
+                                }
+                            }
+                        }
+                        .tables{
+                            table{
+                                border-collapse: collapse;
+                                background-color:#F5F5F7 ;
+                                overflow: hidden;
+                                border-radius:28px ;
+                                th{
+                                    text-align: center;
+                                    border: white 2px solid;
+                                    font: normal normal 500 20px Jost;
+                                    letter-spacing: 0px;
+                                    color: #152B59;
+                                    @include respond(small){
+                                        padding: 5px;
+                                        font-size: 14px;
+                                    }                                
+                                }
+                                td{
+                                    border: white 2px solid;
+                                    font: normal normal 500 15px Jost;
+                                    letter-spacing: 0px;
+                                    color: #152B59;
+                                    padding: 7px 15px;      
+                                    @include respond(small){
+                                        padding: 5px;
+                                        font-size: 14px;
+                                    }                         
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

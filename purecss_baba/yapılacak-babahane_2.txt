@@ -1,0 +1,14 @@
+
+anasayfa resim sýkýntý*****************************************
+çalýþmalar üst*************************************************
+copy footer absolute*******************************************
+header nav ufakta anasayfa gibi olsun**************************
+yan döndürme olayý*********************************************
+footer header height ver***************************************
+
+anasayfa tel no bölümü*****************************************
+
+scriptler
+
+audio olayý
+input number

@@ -1,0 +1,183 @@
+.iletisim-top {
+  .container {
+    .row {
+      .col-xl-12 {
+        .card {
+          background: #ffffff 0% 0% no-repeat padding-box;
+          border-radius: 28px;
+          border: none;
+          height: 150%;
+          .card-header {
+            background-color: transparent;
+            border: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            overflow: hidden;
+            @include respond(large) {
+              flex-wrap: wrap;
+            }
+            img {
+              height: 300px;
+              @include respond(large) {
+                order: -1;
+                width: 50%;
+              }
+            }
+            .change {
+              p {
+                color: #152b59;
+                font-size: 50px;
+                font-weight: bold;
+                text-align: center;
+              }
+              .radio {
+                background: #f5f5f7 0% 0% no-repeat padding-box;
+                box-shadow: inset 10px 10px 20px #a9a9a929,
+                  10px 10px 20px #a9a9a929;
+                border-radius: 25px;
+                opacity: 0.9;
+                display: flex;
+                justify-content: space-around;
+                padding: 10px;
+                .btn2 {
+                  background-color: transparent;
+                  width: 130px;
+                  border-radius: 20px;
+                  font: normal normal bold 23px/45px Jost;
+                  letter-spacing: -2.08px;
+                 // color: #152b59;
+                  display: block;
+                  background: linear-gradient(to right, white 50%, transparent 50%);
+                  background-size: 200% 100%;
+                  background-position: right bottom;
+                  transition: all 0.3s ease-out;
+                  border: none;
+                  i {
+                    color: #152b59;
+                  }
+                }
+                .btn1 {
+                    background-color: transparent;
+                    width: 130px;
+                    border-radius: 20px;
+                    font: normal normal bold 23px/45px Jost;
+                    letter-spacing: -2.08px;
+                   // color: #152b59;
+                    display: block;
+                    background: linear-gradient(to left, white 50%, transparent 50%);
+                    background-size: 200% 100%;
+                    background-position: left bottom;
+                    transition: all 0.3s ease-out;
+                    border: none;
+                    i {
+                      color: #152b59;
+                    }
+                  }
+                .active1 {
+                 // background-color: #ffffff;
+                  background-position: right bottom;
+                  i {
+                    color: #98c78d;
+                  }
+                }
+                .active2 {
+                    // background-color: #ffffff;
+                     background-position: left bottom;
+                     i {
+                       color: #98c78d;
+                     }
+                   }
+              }
+            }
+          }
+        }
+      }
+      .modals {
+        .container {
+          width: 60%;
+          @include respond(large) {
+            width: 100%;
+          }
+          .col-xl-12 {
+            .card {
+              background: #ffffff 0% 0% no-repeat padding-box;
+              box-shadow: 0px 10px 40px #00000024;
+              border-radius: 20px;
+              @include respond(large) {
+                padding: 20px !important;
+              }
+              .header {
+                font: normal normal bold 28px Jost;
+                letter-spacing: 0px;
+                color: #185cff;
+                @include respond(large) {
+                  font-size: 24px;
+                  text-align: center;
+                }
+              }
+              form {
+                input {
+                  margin: 15px 0;
+                  border: 1px solid #e6e6e6;
+                  border-radius: 35px;
+                  color: #152b59 !important;
+                  padding: 10px 15px;
+                  &:focus{
+                      box-shadow: none;
+                  }
+                }
+                textarea {
+                  width: 100%;
+                  padding: 15px;
+                  height: 150px;
+                  border-radius: 20px;
+                  resize: none;
+                  border: 1px solid #e6e6e6;
+                  color: #716f77;
+                  &:focus{
+                    outline: none;
+                }
+                }
+                .btn {
+                  margin-top: 20px;
+                  width: 100%;
+                  border: 1px solid #185cff;
+                  border-radius: 35px;
+                  color: #185cff;
+                  font-weight: 600;
+                  &:hover{
+                      background-color: #185cff;
+                      color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .modals-konum {
+        .container {
+          width: 90%;
+          @include respond(large) {
+            width: 100%;
+          }
+          .col-xl-12 {
+            .card {
+              background: #ffffff 0% 0% no-repeat padding-box;
+              box-shadow: 0px 10px 40px #00000024;
+              border-radius: 20px;
+              height: 500px;
+
+              iframe {
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

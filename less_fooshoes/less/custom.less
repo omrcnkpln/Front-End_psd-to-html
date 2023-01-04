@@ -1,0 +1,278 @@
+
+
+@import "fonts/Aller/stylesheet.css";
+
+@baseColor :#57c5a0;
+@colorBlack:#242424;
+
+//mixins
+.border-radius(@radius : 5px){
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+
+
+.center{
+  width: 940px;
+  margin: 0 auto;
+}
+
+//navbar
+.navbar{
+  height: 45px;
+  background: @colorBlack;
+
+  //logo
+  h1.logo{
+    //******************************************BENDEN******************************************************************
+    width: 156px;
+    //******************************************BENDEN******************************************************************
+    position: relative;
+    top:12px;
+    left:0;
+    &:hover{
+      opacity: .7;
+    }
+  }
+  .nav_right{
+    float: right;
+    //******************************************YARAMADI****************************************************************
+    //position: relative;
+    //z-index: 1;
+    //******************************************YARAMADI****************************************************************
+    ul{
+      overflow: hidden;
+      li{
+        float: left;
+        a{
+          display: block;
+          padding: 0 25px;
+          line-height: 45px;
+          font-size: 11px;
+          color: #7e7e7e;
+          border-right: 1px solid #383838;
+          &:hover{
+            background: #333;
+          }
+        }
+        &:first-child a{
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+//menu
+.menu{
+  height: 60px;
+
+  //menu_left
+  ul.menu_left{
+    float: left;
+    border-right: 1px solid #eee;
+    li{
+      float: left;
+      a{
+        display: block;
+        line-height: 60px;
+        font-size: 16px;
+        color: @colorBlack;
+        border-left: 1px solid #eee;
+        padding: 0 25px;
+        &:hover{
+          background: #f5f5f5;
+          color: @baseColor;
+        }
+      }
+    }
+  }
+
+  //menu_right
+  ul.menu_right{
+    float: right;
+    border-right:1px solid #ccc;
+    li{
+      float: left;
+      a{
+        display: block;
+        padding: 0 25px;
+        border-left: 1px solid #ccc;
+        color: #6e6e6e;
+        height: 60px;
+        em{
+          position: relative;
+          top: 22px;
+          margin-right: 5px;
+          font-size: 17px;
+        }
+        span{
+          position: relative;
+          top: 20px;
+          display: inline-nblock;
+          padding: 5px;
+          background: #adadad;
+          .border-radius();
+          text-align: center;
+          font-size: 12px;
+          color: #fff;
+          font-weight: bold;
+          //******************************************yemeyo bunlarla***************************************************
+          //min-width: 20px;
+          //height: 20px;
+          //line-height: 20px;
+          //******************************************yemeyo bunlarla***************************************************
+        }
+        &:hover{
+          background: #f5f5f5;
+          color: @baseColor;
+        }
+      }
+      &:last-child a span{
+        background: @baseColor;
+      }
+    }
+  }
+}
+
+//slider
+.slider{
+  height: 551px;
+  background: #2e2e2e;
+
+  //slider_item
+  .slider_item{
+    background: #efede9;
+    height: 461px;
+    overflow: hidden;
+    ul{
+      position: relative;
+      li{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        img{
+          position:absolute;
+          top: 0;
+          left: -220px;
+        }
+        span{
+          position: absolute;
+          left: 521px;
+        }
+        .price{
+          width: 68px;
+          height: 67px;
+          background: @baseColor;
+          color: #ffffff;
+          font-weight: bold;
+          font-size: 13px;
+          text-align: center;
+          line-height: 67px;
+          top:71px;
+        }
+        .title{
+          font-size: 40px;
+          font-weight: 300;
+          color: @colorBlack;
+          top: 150px;
+        }
+        .description{
+          font-size: 20px;
+          font-weight: 300;
+          color: @colorBlack;
+          width: 380px;
+          top: 240px;
+          line-height: 27px;
+        }
+        ul.icon_menu{
+          position: relative;
+          left: 521px;
+          top: 340px;
+          li{
+            float: left;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            margin-right: 2px;
+            a{
+              display: block;
+              text-align: center;
+              line-height: 40px;
+              color: #6e6e6e;
+              &:hover{
+                color: @baseColor;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+//slider_button
+.slider_button{
+  ul{
+    border-top: 10px solid #000;
+    position:relative;
+    top: 6px;
+    padding: 0 0 0 8px;
+    li{
+      float: left;
+      border-top: 6px solid transparent;
+      margin-top: -8px  ;
+      a{
+        display:block;
+        padding: 15px 46px 10px 46px;
+        text-align: center;
+        font-size: 18px;
+        color: #acacac;
+        span{
+          display: block;
+          font-size: 12px;
+          color: #adadad;
+          padding-top: 5px;
+        }
+        &:hover{
+          color: #fff;
+        }
+      }
+      &.active{
+        border-color: @baseColor;
+        a{
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

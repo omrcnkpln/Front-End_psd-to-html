@@ -1,0 +1,69 @@
+$thumbColor: #808080;
+$dateColor: #185CFF;
+$magnumYesili: #c1dfc1;
+$bgWhite: #fff;
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint== xlarge) {
+    @media (max-width: 1399.98px)  {
+      @content;
+    }
+  }
+    @if ($breakpoint== large) {
+      @media (max-width: 991.98px) {
+        @content;
+      }
+    }
+    @if ($breakpoint == medium) {
+      @media (max-width: 767.98px)  {
+        @content;
+      }
+    }
+    @if ($breakpoint == small) {
+      @media (max-width: 575.98px) {
+        @content;
+      }
+    }
+    @if ($breakpoint == xsmall) {
+      @media (max-width: 400.98px) {
+        @content;
+      }
+    }
+  }
+
+.container{
+  width: 80%;
+}
+
+body{
+  background-color: #f5f5f5;
+  font-family: 'Jost', sans-serif;
+  overflow-x:hidden !important;
+}
+.btn-check:focus + .btn , .btn:focus{
+  box-shadow: none;
+}
+
+div::-webkit-scrollbar {
+  cursor: cell;
+  height: 5px;
+  width: 5px;
+  background-color: $thumbColor;
+  border-radius: 4px;
+}
+
+div::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background-color: #808080;
+  border-radius: 4px;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  background-color: darken(#808080, $amount: 5);
+
+}
+
+div::-webkit-scrollbar-thumb:active {
+  background-color: darken(#808080, $amount: 9);
+}
+

@@ -1,0 +1,279 @@
+.blog-main{
+    .container{
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include respond(large){
+                flex-wrap: wrap;
+            }
+            
+            p{
+                font-weight: 500;
+                font-size: 50px;
+                span{
+                    color: #98C78D;
+                }
+            }
+            
+            .search{
+                width: 40%;
+                @include respond(large){
+                    width: 100%;
+                }
+                input{
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 15px;
+                    padding: 20px;
+                }
+                button{
+                    position: absolute;
+                    margin-left: -50px;
+                    margin-top: 10px;
+                    background: transparent;
+                    border: none;
+                    i{  
+                       
+                            font-size: 30px;
+                           
+                            color: #98C78D;
+                        }
+                }
+                    
+            }
+        }
+        .row{
+            .col-xl-6 ,.col-xl-8 ,.col-xl-4{
+                .card{
+                    margin-top: 10px;
+                    border-radius: 20px;
+                    background-color: transparent;
+                    border: none;
+                    img{
+                        height: 400px;
+                    }
+                    .badges{ 
+                        display: flex;
+                        margin-top: 10px;
+                        gap: 10px;
+                        .badge{
+                            background: #EBF1FF;
+                            color: #152B59;
+                            font-size: 15px;
+                            border-radius: 10px;
+                    }   
+                }
+                .header{
+                    color: #152B59;
+                    font-weight: 500;
+                    font-size: 24px;
+                }
+                .date{
+                    color: #152B59;
+                    font-weight: 500;
+                    font-size: 12px;
+                }
+                }
+            }
+        }
+    }
+}
+
+.blog-detail-top{
+    .container{
+        .row{
+            .col-xl-12{
+                .card{
+                    display: flex;
+                    flex-direction: row;
+                    border: none;
+                    border-radius: 28px;
+                    background: #F5F5F7 0% 0% no-repeat padding-box;
+                    box-shadow: -18px -18px 20px #FFFFFF;
+                    background: #F5F5F7 0% 0% no-repeat padding-box;
+                    box-shadow: 18px 18px 20px #D1D9E6;
+                    @include respond(large){
+                        flex-wrap: wrap;
+                    }
+                    .header{
+                        border-right:90px solid #98C78D ;
+                        padding: 70px 50px 0 50px;
+                        @include respond(large){
+                            border: none;
+                            padding: 10px ;
+                            text-align: center;
+                            
+                        }
+                        h3{
+                            color: #152B59;
+                            font-size: 50px;
+                            font-weight: bold;
+                        }
+                        .date{
+                            color: #152B59;
+                            font-size: 25px;
+                            font-weight: 500;
+                        }
+                        .tag{
+                            color: #98C78D;
+                            font-size: 18px;
+                        }
+                    }
+                    img{
+                        width: 60%;
+                        height:350px;
+                        @include respond(large){
+                            order: -1;
+                            border: none;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog-detail-content{
+    .container{
+        width: 75%;
+        .row{
+            .col-xl-9{
+                .wrapper{
+                    .header{
+                        color: #152B59;
+                        font-size: 35px;
+                        font-weight: bold;
+                    }
+                    .content{
+                        color: #152B59;
+                        font-size: 24px;
+                    }
+                }
+                .badges{
+                    display: flex;
+                    gap: 10;
+                    .badge{
+                        background-color: #EBF1FF;
+                        color: #152B5A;
+                        border-radius: 28px;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .col-xl-3{
+                .tags{
+                    .card{
+                        background: #F5F5F7 0% 0% no-repeat padding-box;
+                        box-shadow: -18px -18px 20px #FFFFFF;
+                        border-radius: 28px;
+                        h4{
+                            color: #152B59;
+                            font-weight: 500;
+                            font-size: 28px;
+                        }
+                        ul{
+                            list-style: none;
+                            li{
+                                margin-top: 10px;
+                                color: #152B59;
+                                font-size: 20px;
+                                @include respond(large){
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                .last{
+                    .card{
+                        background: #F5F5F7 0% 0% no-repeat padding-box;
+                        box-shadow: -18px -18px 20px #FFFFFF;
+                        border-radius: 28px;
+                        
+                        h4{
+                            color: #152B59;
+                            font-weight: 500;
+                            font-size: 28px;
+                        }
+                        ul{
+                            padding: 0;
+                            list-style:none;
+                            counter-reset: item;
+                            a{
+                                display: flex;
+                                text-decoration: none;
+                                align-items: center;
+                                justify-content: space-between;
+                                @include respond(large){
+                                    justify-content:center;
+                                }
+                                li{
+                                    margin-top: 10px;
+                                    color: #152B59;
+                                    font-size: 20px;
+                                    font-weight: 500;
+                                }
+                                img{
+                                    height: 60px;
+                                }
+                            }
+                            
+                            
+                        }
+                        ul li::before{
+                            content: counter(item) ". ";
+                            counter-increment: item;
+                            color: #98C78D !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog-detail-other{
+    .container{
+        .header{
+            color: #152B59;
+            font-size: 28px;
+            font-weight: 500;
+        }
+        .row{
+            .col-xl-4{
+                .card{
+                    margin-top: 10px;
+                    border-radius: 20px;
+                    background-color: transparent;
+                    border: none;
+                    img{
+                        height: 400px;
+                    }
+                    .badges{ 
+                        display: flex;
+                        margin-top: 10px;
+                        gap: 10px;
+                        .badge{
+                            background: #EBF1FF;
+                            color: #152B59;
+                            font-size: 15px;
+                            border-radius: 10px;
+                    }   
+                }
+                .header{
+                    color: #152B59;
+                    font-weight: 500;
+                    font-size: 24px;
+                }
+                .date{
+                    color: #152B59;
+                    font-weight: 500;
+                    font-size: 12px;
+                }
+                }
+            }
+        }
+    }
+}

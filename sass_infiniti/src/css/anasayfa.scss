@@ -1,0 +1,263 @@
+
+
+// vertical navbar ve sidebar ksıımları position:sticky ile yapılabilirdi sanki
+
+
+@import "settings";
+@import "anasayfa-mediaqueries";
+
+.container {
+    max-width: 1300px !important;
+}
+
+html,body{
+    height: 100%;
+}
+.main{
+    min-height: 100%;
+}
+
+.image-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    // padding-top: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        // position: absolute;
+        // left: 50%;
+        // top: 50%;
+        // transform: translate(-50%, -50%);
+
+        max-width: 100% !important;
+        max-height: 100% !important;
+
+        // object-fit: cover;
+    }
+}
+
+.image-wrapper-user {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50px;
+    border: 1px solid $grey;
+}
+
+.with-image {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    img {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+    &:nth-of-type(n + 2) {
+        border-top: 1px solid $border-color;
+    }
+}
+
+.equal-height {
+    height: 250px;
+    overflow: auto;
+    background-color: red;
+}
+
+.sayfa-baslik {
+    .image-wrapper-user {
+        width: 100px;
+        height: 100px;
+        border: none;
+        position: relative;
+        .p-p-cover {
+            position: absolute;
+            // top: 0;
+            // left: 0;
+            // right: 0;
+            // bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.header-shadow {
+    // box-shadow: 0px 10px 30px $border_color;
+    // z-index: -1;
+    // box-shadow: 0px -2px 6px $border_color_2;
+    box-shadow: 0px 20px 20px $border_color;
+}
+
+header {
+    // box-shadow: 0px 40px 30px -15px $border_color;
+    .fixed-top {
+        background-color: white;
+        border-bottom: 1px solid $border_color;
+        &:last-of-type {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 100%);
+        }
+    }
+    .vertical-navbar-area.fixed-top {
+        border: none;
+    }
+    .flex-row {
+        height: 70px;
+    }
+    .image-with-badge {
+        .badge-dark {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            line-height: 15px;
+            bottom: 3px;
+            right: 5px;
+            font-size: 9px;
+            font-weight: 400;
+            border-radius: 15px;
+        }
+    }
+    ul {
+        li {
+            &:last-of-type {
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+.sidebar.on,
+.vertical-navbar-area.on {
+    display: flex;
+}
+
+.sidebar {
+    display: none;
+    background-color: $white;
+    // width: max-content;
+    width: 240px;
+    top: 220px;
+    ul {
+        width: 240px;
+        .nav-item {
+            .nav-link {
+                padding-left: 1rem;
+                // padding-right: 1rem;
+                font-size: 16px;
+                // line-height: 23px;
+                font-weight: 500;
+                color: $black;
+                @include transition(133ms all);
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                display: flex;
+                align-items: center;
+                &:hover {
+                    background-color: #eaf5ff;
+                    color: $light_blue;
+                    svg {
+                        path,
+                        rect {
+                            fill: $light_blue;
+                        }
+                    }
+                }
+                svg {
+                    width: 16px;
+                    path,
+                    rect {
+                        fill: #000000;
+                    }
+                }
+                span {
+                    padding-left: 5px;
+                }
+                &.active {
+                    background-color: #eaf5ff;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    color: $light_blue;
+                    svg {
+                        path,
+                        rect {
+                            fill: $light_blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.vertical-navbar-area {
+    // border-bottom: 1px solid $border-color;
+    align-items: center;
+    display: none;
+    border-top: 1px solid $border_color;
+    .vertical-navbar {
+        // width: 1000px;
+        width: initial;
+        overflow-x: auto;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none;
+        @include scrollbar {
+            height: 0;
+        }
+        .nav {
+            width: 1200px;
+            justify-content: space-between;
+            .nav-item {
+                .nav-link.active {
+                    color: $light_blue;
+                    border-bottom: 3px solid $light_blue;
+                    border-bottom-right-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                }
+                .nav-link:hover {
+                    color: $light_blue;
+                }
+            }
+            .nav-link {
+                font-size: 16px;
+                font-weight: 500;
+                color: $black;
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.content {
+    max-width: 1020px;
+    margin-top: 50px;
+}
+
+.security-box {
+    border: 1px solid $border_color_2;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.four-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // grid-template-rows: 170px 250px 130px;
+    // grid-template-areas:
+    //     "item-1 item2"
+    //     "item-3 item4";
+    grid-gap: 1rem;
+}
+
+footer{
+    // background-color: red;
+    // position: absolute;
+    // top: 100%;
+    // bottom: 0;  
+    // margin-top: 90%;
+}

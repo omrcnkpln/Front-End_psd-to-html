@@ -1,0 +1,88 @@
+.videolar{
+    .container{
+        .h3{
+            font-weight: bold;
+            font-size: 40px;
+            @include respond(small){
+                font-size: 30px;
+             }
+        }
+        .row{
+            #owl-two{
+                .owl-stage-outer{
+                    .owl-stage{
+                        .owl-item{
+                            transition:all 0.3s;
+                            height: 290px;
+                            background: transparent linear-gradient(180deg, #FFFFFF00 0%, #000000FA 100%) 0% 0% no-repeat padding-box;
+                            border: none;
+                            border-radius: 28px;
+                            
+                            @include respond(xsmall){
+                                height: 530px;
+                             }
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 28px;
+                            }
+                            .card-img-overlay{
+                                display: flex;
+                                gap:47%;
+                                padding: 35px;
+                                flex-direction: column;
+                                .date{
+                                    letter-spacing: 0px;
+                                    color: #FFFFFF;
+                                    font-size: 18px;
+                                }
+                                .bottom{
+                                    .content{
+                                        letter-spacing: 0px;
+                                        color: #FFFFFF;
+                                        font-size: 22px;
+                                        align-self: flex-end;
+                                    }
+                                    .tag{
+                                        margin-top: 20px;
+                                        align-self: flex-end;
+                                        background: #EBF1FF;
+                                        color: #152B59;
+                                        font-size: 10px;
+                                        border-radius: 28px;
+                                    }
+                                }
+                               
+                            }
+                            
+                        }
+                        .owl-item:hover{
+                            opacity: 0.8;
+                        }
+                    }
+                }
+                .owl-nav { display: block !important; }
+                .owl-prev {
+                    width: 15px;
+                    height: 100px;
+                    position: absolute;
+                    top: 40%;
+                    margin-left: -30px;
+                    display: block !important;
+                    border:0px solid black;
+                    
+                }
+                
+                .owl-next {
+                    width: 15px;
+                    height: 100px !important;
+                    position: absolute;
+                    top: 40%;
+                    right: 0px;
+                    display: block !important;
+                    border:0px solid black;
+                }
+            }
+        }
+    }
+}

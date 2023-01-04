@@ -1,0 +1,317 @@
+.hizmetler-top{
+    .container{
+        .row{
+            .col-xl-5{
+                img{
+                    width: 100%;
+                    max-height:500px;
+                }
+            }
+            .col-xl-7{
+                .text-wrapper{
+                    padding: 50px 0 50px 0;
+                    .header{
+                        color: #152B5A;
+                        font-size: 52px;
+                        font-weight: bold;
+                    }
+                    .header-small{
+                        color: #152B5A;
+                        font-size: 38px;
+                        font-weight: bold;
+                    }
+                    .content{
+                        color: #152B59;
+                        font-size: 26px;
+                        font-weight:400;
+                    }
+                    .content-small{
+                        color: #152B59;
+                        font-size: 24px;
+                        font-weight:400;
+                    }
+                    .button{
+                        button{
+                            color: #FFFFFF;
+                            background-color:#152B59 ;
+                            font-size: 23px;
+                            font-weight: bold;
+                            padding: 10px 30px;
+                            border-radius: 28px;
+                        }
+                    }
+                }
+            }
+        }
+        .row{
+            .bilgi{
+                padding: 30px 20px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                border-top: 1px solid rgba(0, 0, 0, 0.2);
+                color: #152B5A;
+                font-size: 33px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.hizmetler-mid{
+    
+    .container{
+        .row{
+            .col-xl-7{
+                .wrapper{
+                    .head{
+                        color: #152B59;
+                        font-size: 35px;
+                        font-weight: 500;
+                    }
+                    .content{
+                        margin-top: 20px;
+                        .list{
+                            display: flex;
+                            align-items: center;
+                            gap:25px;
+                            color: #152B59;
+                            font-size: 25px;
+                            b{
+                                margin: 0;
+                                padding: 0;
+                                font-weight:500;
+                                word-wrap: normal !important;
+                            }
+                        }
+                        .list-margin{
+                            display: flex;
+                            align-items: center;
+                            gap:25px;
+                            color: #152B59;
+                            font-size: 25px;
+                            margin-top: 10px;
+                            b{
+                                margin: 0;
+                                padding: 0;
+                                font-weight:500;
+                                word-wrap: normal !important;
+                            }
+                        }
+                        .paragraf{
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+            .col-xl-5{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .row{
+            .bilgi{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include respond(large){
+                    flex-wrap: wrap;
+                }
+                p{
+                    color: #152B5A;
+                    font-size: 27px;
+                    font-weight: bold;
+                }
+                .mesaj{
+                    @include respond(large){
+                        width: 100%;
+                        text-align: center;
+                     }
+                    .btn{
+                        padding:10px 30px;
+                        border-radius: 28px;
+                        background: #152B59 0% 0% no-repeat padding-box;
+                        color: #FFFFFF;
+                        font-size: 27px;
+                        @include respond(large){
+                            font-size: 25px;
+                            
+                         }
+                }
+            }
+        }
+        }
+    }
+}
+
+.hizmetler-sahis{
+    .container{
+        .header{
+            color: #152B59;
+            font-size: 45px;
+            font-weight: 500;
+        }
+        .row{
+            .col-xl-12{
+                .info{
+                    color: #152B59;
+                    font-size: 28px;
+                    font-weight: 500;
+                    @include respond(medium){
+                        margin: 20px;
+                        text-align: center;
+                    }
+                }   
+                .list{
+                    .container{
+                        @include respond(medium){
+                            width: 95%;
+                        }
+                        .list-item{
+                            display: flex;
+                            gap: 20px;
+                            p{
+                                color: #152B59;
+                                font-size: 20px;
+                            }
+                                img{
+                                    margin-top: 5px;
+                                    background: #98C78D;
+                                    align-self: flex-start;
+                                    border-radius:5px;
+                                }
+                            
+                        }
+                    }       
+                }
+                
+            }
+        }
+    }
+}
+
+.hizmetler-kosgeb{
+    .container{
+        .header{
+            color: #152B59;
+            font-size: 38px;
+            font-weight: 500;
+        }
+        .row{
+            .col-xl-3{
+                .wrapper{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    img{
+                        height: 80px;
+                        width: 80px;
+                    }
+                    p{
+                        color: #152B59;
+                        text-align: center;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hizmetler-kosgeb-table{
+    .container{
+        .header{
+            color: #152B59;
+            font-size: 38px;
+            font-weight: 500;
+        }
+        .dipnot{
+            color: #152B59;
+            font-size: 14px;
+            p{
+                margin: 2px;
+            }
+        }
+        .row{
+            table{
+                th{
+                    padding: 15px;
+                    color: #98C78D;
+                    font-size: 17px;
+                    font-weight: 500;
+                    @include respond(small){
+                        padding: 5px;
+                        font-size: 14px;
+                    }
+                }
+                
+                td{
+                    position: relative;
+                    color: #152B59;
+                    font-size: 17px;
+                    font-weight: 500;
+                    span{
+                        font-weight: 400;
+                    }
+                    img{
+                        height: 40px;
+                        @include respond(medium){
+                           height: 30px;
+                        }
+                    }
+                    .check{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    
+                }
+                    @include respond(small){
+                        padding: 5px;
+                        font-size: 14px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+.hizmetler-kosgeb-basvuru{
+    .container{
+        .header{
+            color: #152B59;
+            font-size: 38px;
+            font-weight: 500;
+        }
+        .row{
+            .col-xl-12{
+                .list{
+                    .container{
+                        @include respond(medium){
+                            width: 95%;
+                        }
+                        .list-item{
+                            display: flex;
+                            gap: 20px;
+                            p{
+                                color: #152B59;
+                                font-size: 20px;
+                            }
+                                img{
+                                    margin-top: 5px;
+                                    background: #98C78D;
+                                    align-self: flex-start;
+                                    border-radius:5px;
+                                }
+                            
+                        }
+                    }       
+                }
+            }
+        }
+    }
+}

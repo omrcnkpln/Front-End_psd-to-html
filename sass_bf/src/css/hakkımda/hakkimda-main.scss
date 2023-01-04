@@ -1,0 +1,244 @@
+.hakkimda{
+    .container{
+        .row{
+            .col-xl-4{
+                .left-bar{
+                    img{
+                        width: 100%;
+                    }
+                    .head{
+                        color: #152B59;
+                        .big{
+                            text-align: center;
+                            font-size: 38px;
+                            font-weight: bold;
+                        }
+                        .unv{
+                            text-align: center;
+                            font-size: 23px;
+                            font-weight: 500;
+                        }
+                    }
+                    .contact{
+                        ul{
+                            list-style: none;
+                            li{
+                                display: flex;
+                                align-items: center;
+                                margin-top: 10px;
+                                gap: 10px;
+                                @include respond(medium){
+                                    justify-content: center;
+                                }
+                                i{
+                                    color: #98C78D;
+                                    font-size: 25px;
+                                }
+                                p{
+                                    color: #152B59;
+                                    font-size: 22px;
+                                    font-weight:500;
+                                    margin: 0;
+                                }
+                                a{
+                                    color: #152B59;
+                                    text-decoration: none;
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    i{
+                                        color: #98C78D;
+                                        font-size: 25px;
+                                    }
+                                    p{
+                                        color: #152B59;
+                                        font-size: 22px;
+                                        font-weight:500;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .social{
+                        .header{
+                            p{
+                            font: normal normal bold 30px Jost;
+                            letter-spacing: 0px;
+                            color: #152B59;
+                            border-bottom: 1px solid #152B59;
+                            width: 60%;
+                            margin: auto;
+
+                            } 
+                        }
+                        ul{
+                            list-style: none;
+                            li{
+                                display: flex;
+                                align-items: center;
+                                margin-top: 10px;
+                                gap: 10px;
+                                @include respond(medium){
+                                    justify-content: center;
+                                }
+                                a{
+                                    color: #152B59;
+                                    text-decoration: none;
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    i{
+                                        color: #98C78D;
+                                        font-size: 25px;
+                                    }
+                                    p{
+                                        color: #152B59;
+                                        font-size: 22px;
+                                        font-weight:500;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .col-xl-8{
+                .history{
+                    .header{
+                        p{
+                        font: normal normal bold 32px Jost;
+                        letter-spacing: 0px;
+                        color: #152B59;
+                        width: 21%;
+                        margin-left:20%; 
+                        margin-right: 80%;
+                        border-bottom: 1px solid #98C78D;
+                        @include respond(large){
+                            text-align:center ;
+                            width: 100%;
+                            margin: 0;
+                        }
+                        }
+                        
+                    }
+                    .content{
+                        font: normal normal normal 24px Jost;
+                        letter-spacing: 0.23px;
+                        color: #152B59;
+                        @include respond(medium){
+                            text-align:center ;
+                        }
+                    }
+                }
+                .edu{
+                    .header{
+                        p{
+                            font: normal normal bold 32px Jost;
+                            letter-spacing: 0px;
+                            color: #152B59;
+                            width: 12%;
+                            margin-left:20%; 
+                            margin-right: 80%;
+                            border-bottom: 1px solid #98C78D;
+                            @include respond(large){
+                                text-align:center ;
+                                width: 100%;
+                                margin: 0;
+                            }
+                            }
+                    }
+                    .content{
+                        display: flex;
+                        .time{
+                            border-right: 10px solid #98C78D;
+                            border-radius: 10px;
+                            .startEnd{
+                                p{
+                                    font: normal normal bold 23px Jost;
+                                    letter-spacing: 0.21px;
+                                    color: #152B59;
+                                    margin: 0;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        .name{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            .header{
+                                font: normal normal bold 23px Jost;
+                                letter-spacing: 0.21px;
+                                color: #152B59;
+                            }
+                            .subhead{
+                                font: normal normal normal 21px Jost;
+                                letter-spacing: 0.21px;
+                                color: #152B59;
+                            }
+                        }
+                    }
+                }
+                .career{
+                    .header{
+                        p{
+                            font: normal normal bold 32px Jost;
+                            letter-spacing: 0px;
+                            color: #152B59;
+                            width: 15%;
+                            margin-left:20%; 
+                            margin-right: 80%;
+                            border-bottom: 1px solid #98C78D;
+                            @include respond(large){
+                                text-align:center ;
+                                width: 100%;
+                                margin: 0;
+                            }
+                            }
+                    }
+                    .content{
+                        display: flex;
+                        .time{
+                            border-right: 10px solid #98C78D;
+                            border-radius: 10px;
+                            .startEnd{
+                                p{
+                                    font: normal normal bold 23px Jost;
+                                    letter-spacing: 0.21px;
+                                    color: #152B59;
+                                    margin: 0;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        .name{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            .header{
+                                font: normal normal bold 23px Jost;
+                                letter-spacing: 0.21px;
+                                color: #152B59;
+                            }
+                            .subhead{
+                                font: normal normal normal 21px Jost;
+                                letter-spacing: 0.21px;
+                                color: #152B59;
+                            }
+                        }
+                        .desc{
+                            font: normal normal normal 14px Jost;
+                            letter-spacing: 0.13px;
+                            color: #152B59;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

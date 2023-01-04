@@ -1,0 +1,280 @@
+.popular{
+    .container{
+        padding: 0;
+        @include respond(xsmall){
+            padding: 0;
+         }
+        .h3{
+            letter-spacing: 0px;
+            color: #152B5A;
+            font-size: 40px;
+            font-weight: bold;
+            @include respond(small){
+                font-size: 30px;
+             }
+        }
+        .row{
+           .col-xl-6{
+              .wrapper{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin:20px;
+                  .number{
+                     img{
+                        margin-left: -40px;
+                        width: 170px;
+                        height: 270px;
+                        @include respond(xlarge){
+                           height:290px ;
+                        }
+                        @include respond(xsmall){
+                           height:320px ;
+                        }
+                     }
+                  }
+                  .card{
+                        margin-left: -60px;
+                        height:270px ;
+                        background: #FFFFFF 0% 0% no-repeat padding-box;
+                        box-shadow: 20px 20px 20px #DBDBDB;
+                        border-radius: 0px 28px 28px 0px;
+                        padding: 0px 40px 0px 15px;
+                        @include respond(xlarge){
+                           height:290px ;
+                           padding: 0px;
+                        }
+                        @include respond(large){
+                           padding: 0;
+                        }
+                        @include respond(xsmall){
+                           height:320px ;
+                        }
+                        .header{
+                           letter-spacing: 0px;
+                           color: #152B5A;
+                           font-size: 28px;
+                           font-weight: bold;
+                           @include respond(large){
+                              font-size: 20px  !important;
+                           }
+                           @include respond(xlarge){
+                              font-size: 21px;
+                           }
+                           @include respond(small){
+                              font-size: 20px !important;
+                           }
+                           @include respond(xsmall){
+                              font-size: 17px !important;
+                              margin: 0;
+                           }
+                        }
+                     .content{
+                        letter-spacing: 0px;
+                        color: #152B5A;
+                        font-size: 17px;
+                        @include respond(large){
+                           font-size: 12px !important;
+                        }
+                        @include respond(medium){
+                           font-size: 17px !important;
+                        }
+                        @include respond(xlarge){
+                        font-size: 15px;
+                        }
+                        @include respond(small){
+                           font-size: 14px !important;
+                        }
+                        @include respond(xsmall){
+                           font-size: 13px !important;
+                        }
+                     }
+                     .detail{      
+                           a{
+                              letter-spacing: 0px;
+                              font-size: 19px;
+                              font-weight: bold;
+                              color: #152B59;
+                              text-decoration: none;
+                              @include respond(large){
+                                 font-size: 12px ;
+                              }
+                              @include respond(xlarge){
+                                 font-size: 16px;
+                              }
+                              @include respond(small){
+                                 font-size: 15px;
+                                 
+                              }
+                           }
+                     }
+                  }
+                  .bg{
+                     background-color: #e9e9e9 !important;
+                     box-shadow: none !important;
+                  }
+               }
+            }
+            .col-xl-6:nth-child(2){
+               
+            }
+         }
+      //   .row{
+      //       @include respond(xsmall){
+      //           padding: 0;
+      //        }
+      //       .col-xl-6{
+      //           @include respond(xsmall){
+      //               padding: 0;
+      //            }
+      //           .wrapper{
+                    
+      //               display: flex;
+      //               justify-content: center;
+      //               align-items: center;
+      //               .number{
+      //                   margin-left: -20px;
+      //                   line-height: 300px;
+      //                   letter-spacing: 0px;
+      //                   font-weight: bold;
+      //                   color: #98C78D;
+      //                   font-size: 380px;
+      //                   @include respond(small){
+      //                       font-size: 300px !important;
+      //                    }
+      //                    @include respond(xsmall){
+      //                       font-size: 340px;
+      //                    }
+      //                    @include respond(medium){
+      //                       font-size: 250px !important;
+      //                    }
+      //                    @include respond(large){
+      //                       font-size: 350px;
+      //                    }
+      //               }
+      //               .card{
+      //                   max-height: 263px;
+      //                   margin-left: -55px;
+      //                   background: #FFFFFF 0% 0% no-repeat padding-box;
+      //                   box-shadow: 20px 20px 20px #DBDBDB;
+      //                   border-radius: 0px 28px 28px 0px;
+      //                   padding: 0px 40px 0px 15px;
+      //                   @include respond(small){
+      //                       padding: 0;
+      //                       margin-left: -45px;
+      //                    }
+      //                    @include respond(xsmall){
+      //                       padding: 0;
+      //                       margin-left: -48px;
+      //                    }
+      //                    @include respond(medium){
+      //                       padding: 0;
+      //                       margin-left: -40px !important;
+      //                    }
+      //                    @include respond(large){
+      //                       padding: 0;
+      //                       margin-left: -50px;
+      //                    }
+      //                    @include respond(xlarge){
+      //                       padding: 0;
+      //                       margin-left: -50px;
+      //                    }
+                        
+      //                   .header{
+      //                       letter-spacing: 0px;
+      //                       color: #152B5A;
+      //                       font-size: 28px;
+      //                       font-weight: bold;
+      //                       @include respond(small){
+      //                           font-size: 20px !important;
+      //                        }
+                             
+      //                        @include respond(large){
+      //                           font-size: 18px  !important;
+      //                        }
+      //                        @include respond(xlarge){
+      //                           font-size: 21px;
+      //                        }
+      //                   }
+      //                   .content{
+      //                       letter-spacing: 0px;
+      //                       color: #152B5A;
+      //                       font-size: 17px;
+      //                       @include respond(small){
+      //                          font-size: 12px;
+      //                       }
+      //                       @include respond(large){
+      //                           font-size: 11px !important;
+      //                        }
+      //                        @include respond(xlarge){
+      //                           font-size: 15px ;
+      //                        }
+      //                   }
+      //                   .detail{      
+      //                       a{
+      //                           letter-spacing: 0px;
+      //                           font-size: 19px;
+      //                           font-weight: bold;
+      //                           color: #152B59;
+      //                           text-decoration: none;
+      //                           @include respond(small){
+      //                               font-size: 12px;
+      //                            }
+      //                            @include respond(large){
+      //                               font-size: 12px !important;
+      //                            }
+      //                            @include respond(xlarge){
+      //                               font-size: 16px;
+      //                            }
+      //                       }
+                            
+      //                   }
+      //               }
+                    
+      //           } 
+      //       }
+      //       .col-xl-6:nth-child(2){
+      //           .card{
+      //               margin-left: -85px;
+      //               @include respond(small){
+      //                   margin-left: -75px !important;
+      //                }
+      //                @include respond(large){
+      //                   margin-left: -85px; 
+      //                }
+      //                @include respond(xlarge){
+      //                   margin-left: -85px;
+      //                }
+      //           }
+      //       }
+      //       .col-xl-6:nth-child(3){
+      //           .card{
+      //               margin-left: -95px;
+      //               @include respond(small){
+      //                   margin-left: -60px !important;
+      //                }
+      //                @include respond(large){
+      //                   margin-left: -85px; 
+      //                }
+      //                @include respond(xlarge){
+      //                   margin-left: -85px;
+      //                }
+      //           }
+      //       }
+      //       .col-xl-6:nth-child(4){
+      //           .card{
+      //               margin-left: -95px;
+      //               @include respond(small){
+      //                   margin-left: -75px !important;
+      //                }
+      //                @include respond(large){
+      //                   margin-left: -85px; 
+      //                }
+      //                @include respond(xlarge){
+      //                   margin-left: -85px;
+      //                }
+      //           }
+      //       }
+      //       }
+        }
+    }

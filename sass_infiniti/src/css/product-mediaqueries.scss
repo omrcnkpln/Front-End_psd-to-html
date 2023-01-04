@@ -1,0 +1,124 @@
+$border_color: #e1e1e1;
+// Extra extra large devices (tv, 1440px and up)
+@media screen and (min-width: 1440px) {
+}
+// Extra large devices (large desktops, 1200px and up)
+@media screen and (max-width: 1200px) {
+    .menu-3 {
+        display: none;
+    }
+    #navbar {
+        nav {
+            .nav {
+                width: 800px !important;
+            }
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@media screen and (max-width: 992px) {
+    #information {
+        // background-color: red;
+        .info-border {
+            // width: 0;
+            // position: absolute;
+            // height: 100%;
+            // border-left: 1px solid $border_color;
+            // left: -0.5% !important;
+            // top: 0;
+        }
+        ul {
+            .topic-black {
+                // margin-top: 20px;
+            }
+        }
+    }
+}
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+    header {
+        .header-c {
+            display: none !important;
+        }
+    }
+}
+// Small devices (landscape phones, 576px and up)
+@media screen and (max-width: 576px) {
+    header {
+        .logo {
+            margin-top: 10px;
+            margin-left: 70px;
+            img {
+                height: 45px;
+            }
+        }
+        .header-r {
+            justify-content: space-between;
+            .header-user-welcome {
+                font-size: 0.7rem !important;
+                margin-right: auto !important;
+            }
+            .message-menu {
+                width: 200px !important;
+            }
+            .notification-menu {
+                width: 200px !important;
+            }
+            ul {
+                width: 100%;
+            }
+        }
+    }
+
+    #navbar {
+        position: absolute;
+        top: 10px;
+        box-shadow: none !important;
+        .col-2 {
+            .btn {
+                .svg {
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+        .col-9 {
+            display: none;
+        }
+        .col-1 {
+            display: none !important;
+        }
+    }
+
+    #product-list{
+        .horizontal-center{
+            text-align: center;
+        }
+        .vertical-center{
+            display: flex;
+            align-items: center;
+        }
+        .turn{
+            display: flex;
+            li{
+                width: 150px;
+            }
+        }
+    }
+
+    #send-note{
+        label.section-title{
+            font-size: calc(0.7em + 0.4vw) !important;
+        }
+    }
+
+    #status {
+        .topic-black {
+            font-size: calc(0.8em + 0.3vw) !important;
+        }
+        .section-title {
+            font-size: calc(0.7em + 0.4vw) !important;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.sorular{
+    background-color: #fff;
+    .container{
+        width: 65%;
+        min-height: 350px;
+        .h3{
+            font-weight: bold;
+            font-size: 40px;
+            color: #152B5A;
+            @include respond(small){
+                font-size: 30px;
+             }
+        }
+        .row{
+            .accordion{
+                border-radius: 0;
+                .accordion-item{
+                    border-bottom: 1px solid #e6e6e6;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    border-radius: 0;
+                    .accordion-header{
+                        // box-shadow: none;
+                        .accordion-button{
+                            color: #152B5A; 
+                            padding-left: 0;
+                            &:after {
+                                background-image: url("../images/icons/downArrow.png");
+                            }
+                        }
+                        button{
+                            border-radius: 0;
+                            // border-top: 1px solid red;
+                            background: transparent;
+                            font-family: 'Jost', sans-serif;
+                            font-weight: 500;
+                            color: #152B5A;
+                            &:focus{
+                                box-shadow: none;
+                            }
+                            
+                        }
+                    }
+                    .accordion-body{
+                       color: #152B5A;
+                    }
+                }
+            }
+        }
+    }
+}
